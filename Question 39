@@ -1,0 +1,28 @@
+%%
+[0-9]+ {printf("\nValid digit \n");} 
+.* printf("\nInvalid digit\n");
+%%
+int yywrap(){}
+int main()											
+{
+yylex();
+return 0;
+}
+output:
+Microsoft Windows [Version 10.0.18362.239]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Users\PADMASRI>cd Documents
+
+C:\Users\PADMASRI\Documents>lex 39.l
+
+C:\Users\PADMASRI\Documents>gcc -o 39 lex.yy.c
+
+C:\Users\PADMASRI\Documents>39.exe 39.c
+22
+
+Valid digit
+
+h07
+
+Invalid digit
